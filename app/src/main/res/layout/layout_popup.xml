@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/tenMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 Minutes" />
+
+    <RadioButton
+        android:id="@+id/fifteenMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tenMinutes"
+        android:text="15 Minutes" />
+
+    <RadioButton
+        android:id="@+id/twenMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fifteenMinutes"
+        android:text="20 Minutes" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twenMinutes"
+        android:layout_centerInParent="true"
+        android:text="OK" />
+</RelativeLayout>

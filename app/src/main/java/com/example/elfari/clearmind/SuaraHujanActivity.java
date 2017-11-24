@@ -1,12 +1,15 @@
 package com.example.elfari.clearmind;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.SeekBar;
 
 import java.io.IOException;
@@ -20,6 +23,7 @@ public class SuaraHujanActivity extends AppCompatActivity implements SeekBar.OnS
     private MediaPlayer mp;
     private AudioManager am;
     private SeekBar sb;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,17 @@ public class SuaraHujanActivity extends AppCompatActivity implements SeekBar.OnS
         btnTimer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Dialog dialog = new Dialog(SuaraHujanActivity.this);
+                dialog.setContentView(R.layout.layout_popup);
+                dialog.setTitle("This is my custom dialog box");
+                dialog.setCancelable(true);
+                // there are a lot of settings, for dialog, check them all out!
+                // set up radiobutton
+                RadioButton rd1 = (RadioButton) dialog.findViewById(R.id.tenMinutes);
+                RadioButton rd2 = (RadioButton) dialog.findViewById(R.id.fifteenMinutes);
+
+                // now that the dialog is set up, it's time to show it
+                dialog.show();
 
             }
         });
