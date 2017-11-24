@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        sound = new MySound(R.color.colorAccent,"Lagu Senang");
+        sound = new MySound(R.color.colorAccent,"Lagu Hujan");
         mySounds.add(sound);
 
-        sound = new MySound(R.color.colorPrimary,"Lagu Bahagia");
+        sound = new MySound(R.color.colorPrimary,"Lagu Laut");
         mySounds.add(sound);
 
         mAdapter = new MySoundAdapter(mySounds);
